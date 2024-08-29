@@ -39,7 +39,8 @@ class _ScreenEmployeeDetailsState extends State<ScreenEmployeeDetails> {
           padding: const EdgeInsets.all(8),
           child: Form(
             key: _formKey,
-            child: Column(
+            child:SingleChildScrollView(child: 
+             Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -129,6 +130,7 @@ class _ScreenEmployeeDetailsState extends State<ScreenEmployeeDetails> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
+                    keyboardType: TextInputType.numberWithOptions(),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Mobile Number Cannot be empty!';
@@ -197,7 +199,7 @@ class _ScreenEmployeeDetailsState extends State<ScreenEmployeeDetails> {
                   ),
                 )
               ],
-            ),
+            ),)
           ),
         ));
   }
